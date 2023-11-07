@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://bf08b84yxe83k"]
+
+[ext_resource type="Shader" path="res://addons/squiggles_fur/assets/furry_material.gdshader" id="1_alas3"]
+[ext_resource type="Texture2D" uid="uid://x52im03hlhsp" path="res://addons/squiggles_fur/assets/fuzzy_fur_gradient.tres" id="2_mo3p2"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_alas3")
+shader_parameter/density = 16.0
+shader_parameter/taper_power = 2.0
+shader_parameter/test_geometry = false
+shader_parameter/taper_alpha = ExtResource("2_mo3p2")
+shader_parameter/pbr_metalness = 0.0

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Kindred (League of Legends) - Rigged
+* source:	https://sketchfab.com/3d-models/kindred-league-of-legends-rigged-06a32da82b0441c39950296315307400
+* author:	maisth (https://sketchfab.com/maisth)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Kindred (League of Legends) - Rigged" (https://sketchfab.com/3d-models/kindred-league-of-legends-rigged-06a32da82b0441c39950296315307400) by maisth (https://sketchfab.com/maisth) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

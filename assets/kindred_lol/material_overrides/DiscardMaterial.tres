@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://ds6cjqv3arv7t"]
+
+[ext_resource type="Shader" path="res://assets/kindred_lol/material_overrides/DiscardMaterial.gdshader" id="1_nyr02"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_nyr02")
