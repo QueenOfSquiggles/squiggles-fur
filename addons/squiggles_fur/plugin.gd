@@ -7,6 +7,8 @@ var shell_fur_script :Script = preload("res://addons/squiggles_fur/types/ShellFu
 
 func _enter_tree():
 	add_custom_type("ShellFur", "Node", shell_fur_script, null)
+	
+	editor_inspector.interface_ref = get_editor_interface()
 	add_inspector_plugin(editor_inspector)
 
 

@@ -1,5 +1,8 @@
 @tool
 extends EditorInspectorPlugin
+class_name ShellFurInspector
+
+var interface_ref : EditorInterface
 
 class ContainerParts:
 	var root : PanelContainer
@@ -78,7 +81,7 @@ func _parse_begin(object: Object) -> void:
 	add_custom_control(cont.root)
 
 func _make_instance_real(fur : ShellFur) -> void:
-	EditorInterface.mark_scene_as_unsaved()
+	_try_do_save()
 	FurTools.update_all_shells_on(fur)
 	if not fur.furry_context:
 		fur.furry_context = FurTools.FurryModelContext.new(fur)
@@ -86,12 +89,20 @@ func _make_instance_real(fur : ShellFur) -> void:
 
 
 func _purge_shells(fur : ShellFur) -> void:
-	EditorInterface.mark_scene_as_unsaved()
+	_try_do_save()
 	var targets := FurTools.get_target_meshes(fur)
 	for t in targets:
 		var shells := FurTools.get_instanced_shells_for(t)
 		for s in shells:
 			s.call_deferred("queue_free")
+
+func _try_do_save() -> void:
+	if not interface_ref:
+		return
+	if "mark_scene_as_unsaved" in interface_ref:
+		interface_ref.mark_scene_as_unsaved()
+	else:
+		push_warning("Marking scenes as unsaved in-editor for Godot 4.0.X is not currently supported. Please modify another property if you want to ensure all changes are saved!")
 
 func _handle_process_realtime(is_pressed : bool, fur : ShellFur) -> void:
 	print("Processing realtime: " + str(is_pressed))

@@ -7,7 +7,6 @@ A big pile of variables and functions that are useful for generating fur layers.
 
 const SHELL_FUR_GROUP_ID = "shell_fur_instance_mesh"
 const FUR_MATERIAL := preload("res://addons/squiggles_fur/assets/furry_material.tres")
-static var fur_thread : Thread
 
 class FurryModelContext:
 	var mesh_shells := {
@@ -129,9 +128,6 @@ static func get_instanced_shells_for(mesh : MeshInstance3D) -> Array[MeshInstanc
 	Updates the shell data for all shells attached to a given MeshInstance3D
 """
 static func update_shells_for(mesh : MeshInstance3D, fur : ShellFur) -> void:
-	if Engine.is_editor_hint():
-		EditorInterface.mark_scene_as_unsaved()
-
 	var old_shell_buffer := get_instanced_shells_for(mesh)
 	var layer_count := int(fur.shells_layer_count)
 	var layer_height_delta := fur.shells_strand_length / fur.shells_layer_count

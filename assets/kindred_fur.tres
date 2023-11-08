@@ -28,10 +28,10 @@ gradient = SubResource("Gradient_vejeu")
 [resource]
 render_priority = 0
 shader = ExtResource("1_p02ne")
+shader_parameter/pbr_metalness = 1.04
+shader_parameter/pbr_roughness = 0.035
 shader_parameter/density = 1024.0
 shader_parameter/taper_power = 0.67
 shader_parameter/test_geometry = false
 shader_parameter/fur_texture = SubResource("NoiseTexture2D_7xp5y")
 shader_parameter/taper_alpha = SubResource("GradientTexture1D_admt4")
-shader_parameter/pbr_metalness = 1.04
-shader_parameter/pbr_roughness = 0.035
