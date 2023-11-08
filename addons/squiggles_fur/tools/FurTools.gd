@@ -129,9 +129,6 @@ static func get_instanced_shells_for(mesh : MeshInstance3D) -> Array[MeshInstanc
 	Updates the shell data for all shells attached to a given MeshInstance3D
 """
 static func update_shells_for(mesh : MeshInstance3D, fur : ShellFur) -> void:
-	if Engine.is_editor_hint():
-		EditorInterface.mark_scene_as_unsaved()
-
 	var old_shell_buffer := get_instanced_shells_for(mesh)
 	var layer_count := int(fur.shells_layer_count)
 	var layer_height_delta := fur.shells_strand_length / fur.shells_layer_count

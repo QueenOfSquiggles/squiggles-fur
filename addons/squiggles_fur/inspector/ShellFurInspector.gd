@@ -1,5 +1,8 @@
 @tool
 extends EditorInspectorPlugin
+class_name ShellFurInspector
+
+static var interface_ref : EditorInterface
 
 class ContainerParts:
 	var root : PanelContainer
@@ -78,7 +81,8 @@ func _parse_begin(object: Object) -> void:
 	add_custom_control(cont.root)
 
 func _make_instance_real(fur : ShellFur) -> void:
-	EditorInterface.mark_scene_as_unsaved()
+	if interface_ref:
+		interface_ref.mark_scene_as_unsaved()
 	FurTools.update_all_shells_on(fur)
 	if not fur.furry_context:
 		fur.furry_context = FurTools.FurryModelContext.new(fur)
@@ -86,7 +90,8 @@ func _make_instance_real(fur : ShellFur) -> void:
 
 
 func _purge_shells(fur : ShellFur) -> void:
-	EditorInterface.mark_scene_as_unsaved()
+	if interface_ref:
+		interface_ref.mark_scene_as_unsaved()
 	var targets := FurTools.get_target_meshes(fur)
 	for t in targets:
 		var shells := FurTools.get_instanced_shells_for(t)

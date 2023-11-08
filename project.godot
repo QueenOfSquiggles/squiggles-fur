@@ -12,8 +12,8 @@ config_version=5
 
 config/name="ProjectFurball"
 run/main_scene="res://furry_test.tscn"
-config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.png"
+config/features=PackedStringArray("4.1", "Forward Plus")
+config/icon="res://repo-assets/demo_pbr.png"
 
 [display]
 
