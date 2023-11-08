@@ -7,7 +7,6 @@ A big pile of variables and functions that are useful for generating fur layers.
 
 const SHELL_FUR_GROUP_ID = "shell_fur_instance_mesh"
 const FUR_MATERIAL := preload("res://addons/squiggles_fur/assets/furry_material.tres")
-static var fur_thread : Thread
 
 class FurryModelContext:
 	var mesh_shells := {
