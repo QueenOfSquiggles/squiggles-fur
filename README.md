@@ -1,6 +1,12 @@
 # squiggles-fur
  A Godot 4 addon for stylish shell fur
 
+## Supported Version
+**4.2.X, 4.1.X** : no notable issues
+
+**4.0.X** : All features functional, but the addon is unable to mark a scene as unsaved, which means the user ***must remember to manually save the scene before closing*** (in order to prevent losing progress).
+
+As of updating, this means that all currently available Godot **4.X** versions are supported
 
 # Gallery
 
