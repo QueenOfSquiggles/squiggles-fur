@@ -1,6 +1,8 @@
 # squiggles-fur
  A Godot 4 addon for stylish shell fur
 
+Now available on the [Official Godot Asset Store!](https://godotengine.org/asset-library/asset/2339)
+
 ## Supported Version
 **4.2.X, 4.1.X** : no notable issues
 
